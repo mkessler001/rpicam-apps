@@ -10,11 +10,11 @@ rpicam_vid = executable('rpicam-vid', files('rpicam_vid.cpp'),
                         link_with : rpicam_app,
                         install : true)
 
-rpicam_hello = executable('rpicam-hello', files('rpicam_hello.cpp'),
-                          include_directories : include_directories('..'),
-                          dependencies: libcamera_dep,
-                          link_with : rpicam_app,
-                          install : true)
+#rpicam_hello = executable('rpicam-hello', files('rpicam_hello.cpp'),
+#                          include_directories : include_directories('..'),
+#                          dependencies: [libcamera_dep, boost_dep],
+#                          link_with : rpicam_app,
+#                          install : true)
 
 rpicam_raw = executable('rpicam-raw', files('rpicam_raw.cpp'),
                         include_directories : include_directories('..'),

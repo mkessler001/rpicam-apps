@@ -31,7 +31,7 @@ postproc_assets += files([
 
 core_postproc_lib = shared_module('core-postproc', core_postproc_src,
                                   include_directories : '../..',
-                                  dependencies : libcamera_dep,
+                                  dependencies : [libcamera_dep, boost_dep],
                                   cpp_args : cpp_arguments,
                                   install : true,
                                   install_dir : posproc_libdir,
